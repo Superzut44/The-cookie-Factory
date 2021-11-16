@@ -43,11 +43,14 @@
                             Cart
                         </a>
                     </li>
+                    <li><a href="logout.php">Log out</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid text-right">
-        <strong>Hello Wilder !</strong>
+        <?php if(!empty($_SESSION['loginname'])) $loginname = $_SESSION['loginname'];
+        else $loginname = "Wilder";
+        echo "<strong>Hello $loginname !</strong>"; ?>
     </div>
 </header>
